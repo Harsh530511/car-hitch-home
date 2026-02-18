@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, User, Phone, Mail, MapPin, Calendar, DollarSign } from "lucide-react";
+import { X, User, Phone, Mail, MapPin, Calendar, IndianRupee } from "lucide-react";
 import { Car, formatPrice, LOCATIONS } from "@/data/cars";
 import { toast } from "sonner";
 
@@ -153,8 +153,8 @@ const BookingModal = ({ car, onClose, initialLocation = "", initialPickup = "", 
               <div className="border-t border-border pt-2 flex justify-between">
                 <span className="font-display font-bold text-card-foreground">Total</span>
                 <span className="font-display font-bold text-xl text-accent flex items-center gap-1">
-                  <DollarSign className="h-5 w-5" />
-                  {grandTotal.toLocaleString("en-US")}
+                  <IndianRupee className="h-5 w-5" />
+                  {grandTotal.toLocaleString("en-IN")}
                 </span>
               </div>
             </div>

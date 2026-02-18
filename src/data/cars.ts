@@ -53,5 +53,5 @@ export const CARS: Car[] = [
 ];
 
 export function formatPrice(price: number): string {
-  return `$${price.toLocaleString("en-US")}`;
+  return `₹${price.toLocaleString("en-IN")}`;
 }
