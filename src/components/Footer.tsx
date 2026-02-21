@@ -7,7 +7,7 @@ const Footer = () => (
         <div>
           <div className="flex items-center gap-2 mb-4">
             <Car className="h-6 w-6 text-accent" />
-            <span className="font-display font-bold text-lg">Drive Easy</span>
+            <span className="font-display font-bold text-lg">DriveEasy</span>
           </div>
           <p className="text-primary-foreground/60 text-sm font-body leading-relaxed">
             India's trusted car rental service. Premium vehicles, transparent pricing, hassle-free experience.
@@ -37,7 +37,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-primary-foreground/10 mt-10 pt-6 text-center text-sm text-primary-foreground/40 font-body">
-        © 2026 Drive Easy. All rights reserved.
+        © 2026 DriveEasy. All rights reserved.
       </div>
     </div>
   </footer>
