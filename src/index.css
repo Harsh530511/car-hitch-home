@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&family=Noto+Serif+Devanagari:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@500;700&family=Instrument+Serif:ital@0;1&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,44 +6,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 97.6%;
-    --foreground: 0 0% 6.7%;
+    /* Paper / Ink / Gold */
+    --background: 42 38% 90%;          /* paper cream */
+    --foreground: 30 12% 12%;          /* ink */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 6.7%;
+    --card: 42 38% 90%;
+    --card-foreground: 30 12% 12%;
+    --popover: 42 38% 90%;
+    --popover-foreground: 30 12% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 6.7%;
+    --primary: 30 12% 12%;
+    --primary-foreground: 42 38% 90%;
 
-    --primary: 0 0% 6.7%;
-    --primary-foreground: 0 0% 97.6%;
+    --secondary: 40 25% 82%;
+    --secondary-foreground: 30 12% 12%;
 
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 6.7%;
+    --muted: 40 22% 80%;
+    --muted-foreground: 30 8% 35%;
 
-    --muted: 0 0% 92%;
-    --muted-foreground: 0 0% 35%;
+    --accent: 42 78% 48%;              /* gold */
+    --accent-foreground: 30 12% 8%;
 
-    --accent: 9 76% 45%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 9 76% 45%;
+    --destructive: 9 70% 42%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 6.7%;
-    --input: 0 0% 6.7%;
-    --ring: 9 76% 45%;
-
+    --border: 30 12% 18%;
+    --input: 30 12% 18%;
+    --ring: 42 78% 48%;
     --radius: 0;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 6.7%;
-    --sidebar-primary: 0 0% 6.7%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 92%;
-    --sidebar-accent-foreground: 0 0% 6.7%;
-    --sidebar-border: 0 0% 6.7%;
-    --sidebar-ring: 9 76% 45%;
+    /* Dark hero tokens */
+    --ink: 30 14% 8%;
+    --ink-soft: 30 12% 14%;
+    --paper: 42 38% 90%;
+    --gold: 42 78% 52%;
+    --rule-on-ink: 30 8% 26%;
+
+    --sidebar-background: 42 38% 90%;
+    --sidebar-foreground: 30 12% 12%;
+    --sidebar-primary: 30 12% 12%;
+    --sidebar-primary-foreground: 42 38% 90%;
+    --sidebar-accent: 40 25% 82%;
+    --sidebar-accent-foreground: 30 12% 12%;
+    --sidebar-border: 30 12% 18%;
+    --sidebar-ring: 42 78% 48%;
   }
 }
 
@@ -53,20 +59,38 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bowlby One', 'Oswald', sans-serif;
+    letter-spacing: -0.01em;
+  }
   .font-deva { font-family: 'Noto Serif Devanagari', serif; }
+  .font-condensed { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+  .font-display { font-family: 'Bowlby One', sans-serif; }
+  .font-italic-serif { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
 }
 
 @layer utilities {
   .marquee {
     display: flex;
     width: max-content;
-    animation: marquee-scroll 40s linear infinite;
+    animation: marquee-scroll 45s linear infinite;
   }
-  .marquee-fast { animation-duration: 25s; }
+  .marquee-fast { animation-duration: 28s; }
   @keyframes marquee-scroll {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
-  .tracking-tightest { letter-spacing: -0.05em; }
+
+  .paper-grain {
+    background-image:
+      radial-gradient(hsl(30 14% 10% / 0.04) 1px, transparent 1px),
+      radial-gradient(hsl(30 14% 10% / 0.03) 1px, transparent 1px);
+    background-size: 6px 6px, 13px 13px;
+    background-position: 0 0, 3px 3px;
+  }
+
+  .ink-glow {
+    background:
+      radial-gradient(ellipse at top, hsl(30 14% 18%) 0%, hsl(30 14% 8%) 60%, hsl(30 14% 5%) 100%);
+  }
 }

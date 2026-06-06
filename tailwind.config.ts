@@ -8,9 +8,11 @@ export default {
     container: { center: true, padding: "1.5rem", screens: { "2xl": "1400px" } },
     extend: {
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
+        display: ['"Bowlby One"', 'sans-serif'],
+        condensed: ['"Oswald"', 'sans-serif'],
         body: ['"Inter"', 'sans-serif'],
         deva: ['"Noto Serif Devanagari"', 'serif'],
+        italicSerif: ['"Instrument Serif"', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -25,6 +27,11 @@ export default {
         accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
         popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
         card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+        ink: "hsl(var(--ink))",
+        "ink-soft": "hsl(var(--ink-soft))",
+        paper: "hsl(var(--paper))",
+        gold: "hsl(var(--gold))",
+        "rule-on-ink": "hsl(var(--rule-on-ink))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
