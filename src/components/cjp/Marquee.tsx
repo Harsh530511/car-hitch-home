@@ -2,26 +2,27 @@ interface Props {
   items: string[];
   separator?: string;
   fast?: boolean;
-  inverted?: boolean;
+  variant?: "ink" | "paper";
   className?: string;
 }
 
-const Marquee = ({ items, separator = "✦", fast, inverted, className = "" }: Props) => {
+const Marquee = ({ items, separator = "✦", fast, variant = "ink", className = "" }: Props) => {
   const loop = [...items, ...items];
+  const inverted = variant === "ink";
   return (
     <div
-      className={`overflow-hidden border-y border-foreground ${
-        inverted ? "bg-foreground text-background" : "bg-background text-foreground"
+      className={`overflow-hidden border-y ${
+        inverted ? "bg-ink text-paper border-rule-on-ink" : "bg-paper text-ink border-ink"
       } ${className}`}
     >
-      <div className={`marquee ${fast ? "marquee-fast" : ""} py-3`}>
+      <div className={`marquee ${fast ? "marquee-fast" : ""} py-2.5`}>
         {loop.map((item, i) => (
           <span
             key={i}
-            className="px-6 text-sm font-display font-bold uppercase tracking-wider whitespace-nowrap flex items-center"
+            className="font-condensed text-xs sm:text-sm inline-flex items-center gap-4 px-6 whitespace-nowrap"
           >
-            <span className={`mr-6 ${inverted ? "text-background" : "text-accent"}`}>{separator}</span>
-            {item}
+            <span className="text-gold">{separator}</span>
+            <span>{item}</span>
           </span>
         ))}
       </div>

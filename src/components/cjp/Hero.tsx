@@ -1,80 +1,80 @@
-const NAV = ["Vision", "Manifesto", "Articles", "Gallery", "Members", "Issues", "Tracker", "Contact"];
-
-const MEMBERS = [
-  { name: "Aarav S.", city: "Bengaluru" },
-  { name: "Priya R.", city: "Pune" },
-  { name: "Karthik V.", city: "Chennai" },
-  { name: "Mehak J.", city: "Delhi" },
-  { name: "Rohan D.", city: "Mumbai" },
-  { name: "Sneha M.", city: "Hyderabad" },
-  { name: "Ishaan G.", city: "Kolkata" },
-  { name: "Anaya P.", city: "Jaipur" },
-  { name: "Vikram T.", city: "Lucknow" },
-  { name: "Tara B.", city: "Goa" },
-];
+import { Link } from "react-router-dom";
+import swarm from "@/assets/swarm.jpg";
 
 const Hero = () => (
-  <section className="border-b border-foreground">
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px]">
-      <div className="border-b lg:border-b-0 lg:border-r border-foreground">
-        <div className="border-b border-foreground px-6 sm:px-10 py-4 flex items-center justify-between text-xs uppercase tracking-widest font-display font-bold">
-          <span>Issue №01 · Est. 2026</span>
-          <span className="text-accent">● Live</span>
-        </div>
-
-        <div className="px-6 sm:px-10 py-10 sm:py-16">
-          <p className="font-deva text-lg sm:text-xl mb-6">कॉकरोच जनता पार्टी · Est. 2026</p>
-          <h1 className="font-display font-black tracking-tightest leading-[0.85] text-[14vw] sm:text-[10vw] lg:text-[8.5vw] uppercase">
-            The<br />Cockroach<br />Janta<br /><span className="text-accent">Party.</span>
-          </h1>
-          <p className="mt-8 max-w-xl font-body text-base sm:text-lg leading-relaxed">
-            A party for the overqualified, underpaid and politically frustrated.
-            Voice of the burnt-out youth. Filed under: general disgruntlement.
-          </p>
-        </div>
-
-        <div className="border-t border-foreground px-6 sm:px-10 py-5 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-display font-bold uppercase tracking-widest">
-          {NAV.map((n) => (
-            <a key={n} href={`#${n.toLowerCase()}`} className="hover:text-accent transition-colors">
-              {n}
-            </a>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 border-t border-foreground">
-          <a
-            href="#join"
-            className="px-6 sm:px-10 py-6 font-display font-black text-xl sm:text-2xl uppercase tracking-tight border-b sm:border-b-0 sm:border-r border-foreground hover:bg-foreground hover:text-background transition-colors flex items-center justify-between"
+  <section className="relative ink-glow text-paper overflow-hidden border-b border-rule-on-ink">
+    <img
+      src={swarm}
+      alt=""
+      aria-hidden="true"
+      width={1920}
+      height={1088}
+      className="absolute inset-0 w-full h-full object-cover opacity-15 mix-blend-luminosity"
+    />
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-24 sm:pt-24 sm:pb-32 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-end">
+      <div>
+        <p className="font-condensed text-xs text-gold mb-6 flex items-center gap-3">
+          <span className="inline-block w-2 h-2 bg-gold rotate-45" />
+          Live rally · Since 2026
+        </p>
+        <h1 className="font-display text-paper text-[14vw] sm:text-[10vw] lg:text-[8.5vw] leading-[0.9] uppercase tracking-tight">
+          Voice of the<br />
+          <span className="text-gold">Burnt-Out</span><br />
+          Youth.
+        </h1>
+        <p className="mt-8 max-w-xl text-paper/75 text-base sm:text-lg leading-relaxed">
+          A political movement for the people the system forgot to count.
+          Five demands. Zero sponsors. One large, stubborn swarm.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <Link
+            to="/join"
+            className="font-condensed text-sm px-6 py-4 bg-gold text-ink hover:bg-paper transition-colors border border-gold"
           >
-            Join the Party <span className="text-accent ml-4">→</span>
-          </a>
-          <a
-            href="#issues"
-            className="px-6 sm:px-10 py-6 font-display font-black text-xl sm:text-2xl uppercase tracking-tight hover:bg-foreground hover:text-background transition-colors flex items-center justify-between"
+            JOIN THE PARTY →
+          </Link>
+          <Link
+            to="/manifesto"
+            className="font-condensed text-sm px-6 py-4 border border-paper/60 hover:bg-paper hover:text-ink transition-colors"
           >
-            Raise an Issue <span className="text-accent ml-4">→</span>
-          </a>
+            READ THE MANIFESTO
+          </Link>
         </div>
       </div>
 
-      {/* Live members panel */}
-      <aside className="bg-background">
-        <div className="border-b border-foreground px-5 py-4 flex items-center justify-between">
-          <span className="font-display font-bold uppercase text-xs tracking-widest">Live · Joining now</span>
-          <span className="h-2 w-2 bg-accent animate-pulse rounded-none" />
+      {/* Poster card */}
+      <div className="relative justify-self-end w-full max-w-xs">
+        <div className="absolute -top-3 -left-3 font-condensed text-[10px] text-gold tracking-widest">
+          OFFICIAL POSTER · NO. 001 ★ ★ ★
         </div>
-        <ul className="divide-y divide-foreground">
-          {MEMBERS.map((m, i) => (
-            <li key={i} className="px-5 py-3 flex items-center justify-between text-sm font-body">
-              <span className="font-medium">{m.name}</span>
-              <span className="text-muted-foreground uppercase text-xs tracking-wider">{m.city}</span>
-            </li>
-          ))}
-        </ul>
-        <div className="border-t border-foreground px-5 py-4 text-xs uppercase tracking-widest font-display font-bold">
-          + 21,242 more
+        <div className="border border-gold/50 bg-ink-soft p-5">
+          <div className="aspect-[3/4] bg-gradient-to-br from-ink to-ink-soft border border-rule-on-ink relative overflow-hidden flex flex-col items-center justify-center">
+            <div className="text-[120px] leading-none">🪳</div>
+            <p className="font-condensed text-[10px] text-gold mt-4 tracking-widest">TCJP · 2026</p>
+            <p className="font-italic-serif text-paper text-xl mt-1">Together we survive.</p>
+          </div>
+          <p className="font-condensed text-[10px] text-paper/60 mt-3 text-center">
+            APPROVED · A work of satire
+          </p>
         </div>
-      </aside>
+      </div>
+    </div>
+
+    {/* Bottom stat bar */}
+    <div className="relative border-t border-rule-on-ink bg-ink/80 backdrop-blur">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 divide-x divide-rule-on-ink">
+        {[
+          { v: "21,469", l: "Members & counting" },
+          { v: "5", l: "Demands" },
+          { v: "0", l: "Corporate donors" },
+          { v: "∞", l: "Patience" },
+        ].map((s, i) => (
+          <div key={i} className="px-6 py-6">
+            <div className="font-display text-3xl sm:text-4xl text-gold leading-none">{s.v}</div>
+            <div className="mt-2 font-condensed text-[10px] text-paper/60">{s.l}</div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
