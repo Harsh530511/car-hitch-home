@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import SiteHeader from "./components/cjp/SiteHeader";
 import SiteFooter from "./components/cjp/SiteFooter";
 import LiveMemberTicker from "./components/cjp/LiveMemberTicker";
+import CockroachCursor from "./components/cjp/CockroachCursor";
 import Home from "./pages/Home";
 import Manifesto from "./pages/Manifesto";
 import Articles from "./pages/Articles";
@@ -28,6 +29,7 @@ import Press from "./pages/Press";
 import CardPage from "./pages/CardPage";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth";
 import Protests from "./pages/Protests";
@@ -50,6 +52,7 @@ const Shell = () => {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       {!isAdmin && !isAuth && <SiteHeader />}
       {!isAdmin && !isAuth && <LiveMemberTicker />}
+      {!isAdmin && !isAuth && <CockroachCursor />}
       <div className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -74,6 +77,7 @@ const Shell = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<ProtectedRoute requireAdmin><AdminLayout /></ProtectedRoute>}>
             <Route index element={<Dashboard />} />
