@@ -20,7 +20,8 @@ const Contact = () => {
     const parsed = schema.safeParse(form);
     if (!parsed.success) { toast.error(parsed.error.issues[0]?.message ?? "Invalid input"); return; }
     setBusy(true);
-    const { error } = await supabase.from("contact_messages").insert(parsed.data);
+    const { name, email, message } = parsed.data;
+    const { error } = await supabase.from("contact_messages").insert({ name, email, message });
     setBusy(false);
     if (error) { toast.error(error.message); return; }
     toast.success("Message sent. We read everything.");
