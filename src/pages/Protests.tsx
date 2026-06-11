@@ -21,7 +21,7 @@ const Protests = () => {
         description="Past and upcoming protests held by The Cockroach Janta Party — including the historic 6 June 2026 Cockroach March at Jantar Mantar, New Delhi, demanding accountability on exam irregularities."
         path="/protests"
       />
-      <SectionLabel label="On the Ground" title="Protests &" emphasis="events." description="Where the swarm shows up. Documented dates, locations, and demands." />
+      <SectionLabel as="h1" label="On the Ground" title="Protests &" emphasis="events." description="Where the swarm shows up. Documented dates, locations, and demands." />
       <div className="border-b border-ink">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-ink border border-ink">

@@ -19,7 +19,7 @@ const Articles = () => {
         description="Essays from The Cockroach Janta Party on Indian politics, judicial delay, media monopoly, electoral integrity, and the everyday economy of being burnt out."
         path="/articles"
       />
-      <SectionLabel label="The Journal" title="Essays &" emphasis="dispatches." description="Long-form arguments, short-form rants, and footnotes for the politically curious." />
+      <SectionLabel as="h1" label="The Journal" title="Essays &" emphasis="dispatches." description="Long-form arguments, short-form rants, and footnotes for the politically curious." />
       <div className="border-b border-ink">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-ink border border-ink">
