@@ -10,6 +10,7 @@ const ManifestoPage = () => (
       path="/manifesto"
     />
     <SectionLabel
+      as="h1"
       label="Volume 1, Edition 1"
       title="The"
       emphasis="Manifesto."

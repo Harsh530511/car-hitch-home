@@ -1,8 +1,8 @@
 import SectionLabel from "./SectionLabel";
 
-const Vision = () => (
+const Vision = ({ hideHeader = false }: { hideHeader?: boolean }) => (
   <section id="vision">
-    <SectionLabel label="Chapter One" title="Our Movement's" emphasis="Vision." />
+    {!hideHeader && <SectionLabel label="Chapter One" title="Our Movement's" emphasis="Vision." />}
     <div className="border-b border-ink">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-12 sm:py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>

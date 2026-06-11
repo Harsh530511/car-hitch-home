@@ -10,12 +10,13 @@ const VisionPage = () => (
       path="/vision"
     />
     <SectionLabel
+      as="h1"
       label="Chapter One"
       title="What we"
       emphasis="stand for."
       description="A short statement of purpose. Long enough to mean something, short enough to fit on a poster."
     />
-    <Vision />
+    <Vision hideHeader />
     <div className="border-b border-ink">
       <div className="max-w-3xl mx-auto px-4 sm:px-8 py-12 sm:py-16 space-y-6 text-base sm:text-lg leading-relaxed text-ink/85">
         <p>We are a movement of people who got tired of being addressed in slogans and decided to write our own. We are not a party of grievances; we are a party of receipts.</p>

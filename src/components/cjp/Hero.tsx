@@ -9,6 +9,8 @@ const Hero = () => (
       aria-hidden="true"
       width={1920}
       height={1088}
+      fetchPriority="high"
+      decoding="async"
       className="absolute inset-0 w-full h-full object-cover opacity-15 mix-blend-luminosity"
     />
     <div className="relative max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-24 sm:pt-24 sm:pb-32 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-end">
