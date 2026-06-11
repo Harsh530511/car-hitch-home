@@ -53,7 +53,7 @@ const Shell = () => {
       {!isAdmin && !isAuth && <SiteHeader />}
       {!isAdmin && !isAuth && <LiveMemberTicker />}
       {!isAdmin && !isAuth && <CockroachCursor />}
-      <div className="flex-1">
+      <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/vision" element={<VisionPage />} />
@@ -89,7 +89,7 @@ const Shell = () => {
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
+      </main>
       {!isAdmin && !isAuth && <SiteFooter />}
     </div>
   );

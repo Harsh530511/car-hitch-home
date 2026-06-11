@@ -8,11 +8,11 @@ interface Props {
   jsonLd?: object;
 }
 
-const SITE = "The Cockroach Janta Party";
+const SITE = "TCJP";
 const ORIGIN = typeof window !== "undefined" ? window.location.origin : "";
 
 const SEO = ({ title, description, path, type = "website", jsonLd }: Props) => {
-  const fullTitle = `${title} — ${SITE}`;
+  const fullTitle = title.length > 50 ? title : `${title} — ${SITE}`;
   const url = `${ORIGIN}${path}`;
   return (
     <Helmet>

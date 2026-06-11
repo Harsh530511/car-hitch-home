@@ -1,0 +1,30 @@
+# The Cockroach Janta Party
+
+> A satirical Indian political movement for the overqualified, underpaid and politically frustrated. Five demands. Zero sponsors. One stubborn swarm. Founded 2026.
+
+The Cockroach Janta Party (TCJP) is a satirical political and civic platform reclaiming a slur thrown at India's burnt-out youth. The site publishes a manifesto of five non-negotiable demands, long-form essays on judicial reform, electoral integrity, women's representation, media monopoly and defection, plus field reports from real protests.
+
+## Pages
+
+- [Home](/): Movement overview, hero manifesto, live ticker.
+- [Vision](/vision): Statement of purpose and mission.
+- [Manifesto](/manifesto): The five non-negotiable demands.
+- [Journal / Articles](/articles): Essays and dispatches on Indian politics.
+- [Protests & Events](/protests): Field reports including the 6 June 2026 Cockroach March at Jantar Mantar.
+- [Quotes](/quotes): Slogans and lines from the swarm.
+- [News](/news): Curated press coverage and mentions.
+- [Gallery](/gallery): Posters, photographs, on-ground imagery.
+- [Members](/members): Public roll of the swarm.
+- [Voice — Issues](/voice): Citizen-raised political issues.
+- [Cockroach Tracker](/cockroach-tracker): Live momentum and unemployment indicators.
+- [Membership Card](/card): Generate a satirical member ID.
+- [Join the Swarm](/join): Free, lifelong membership form.
+- [Press Kit](/press): Logos, copy, and contact for journalists.
+- [Contact](/contact): Email and message form.
+
+## Optional
+
+- [Privacy](/privacy)
+- [Terms](/terms)
+- [Disclaimer](/disclaimer)
+- [Sitemap](/sitemap)
