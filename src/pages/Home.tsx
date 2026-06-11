@@ -3,7 +3,7 @@ import Hero from "@/components/cjp/Hero";
 import Marquee from "@/components/cjp/Marquee";
 import Vision from "@/components/cjp/Vision";
 import Manifesto from "@/components/cjp/Manifesto";
-import Faq from "@/components/cjp/Faq";
+import Faq, { FAQS } from "@/components/cjp/Faq";
 import Journal from "@/components/cjp/Journal";
 import Eligibility from "@/components/cjp/Eligibility";
 
@@ -23,18 +23,23 @@ const SOLIDARITY = [
   "You Cannot Squash A Movement",
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 const Home = () => (
   <>
     <SEO
       title="Voice of the Burnt-Out Youth"
       description="The Cockroach Janta Party — a satirical Indian political movement. Five demands. Zero sponsors. One stubborn swarm. Est. 2026."
       path="/"
-      jsonLd={{
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: "The Cockroach Janta Party",
-        url: "/",
-      }}
+      jsonLd={faqJsonLd}
     />
     <Hero />
     <Marquee items={BREAKING} separator="●" variant="ink" fast />
@@ -48,3 +53,4 @@ const Home = () => (
 );
 
 export default Home;
+

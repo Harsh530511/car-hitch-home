@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionLabel from "./SectionLabel";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "What is The Cockroach Janta Party?",
     a: "TCJP is a satirical political movement that reclaims an insult thrown at young, unemployed and politically vocal Indians, and pairs it with five non-negotiable demands on judicial reform, electoral integrity, women's representation, media monopoly, and defection.",

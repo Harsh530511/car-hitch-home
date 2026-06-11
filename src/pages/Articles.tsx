@@ -18,6 +18,19 @@ const Articles = () => {
         title="The Journal — Essays & Dispatches"
         description="Essays from The Cockroach Janta Party on Indian politics, judicial delay, media monopoly, electoral integrity, and the everyday economy of being burnt out."
         path="/articles"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "The Journal",
+          description: "Essays and dispatches from The Cockroach Janta Party.",
+          hasPart: list.map((a) => ({
+            "@type": "Article",
+            headline: a.title,
+            description: a.excerpt,
+            datePublished: a.date,
+            url: `/articles/${a.slug}`,
+          })),
+        }}
       />
       <SectionLabel as="h1" label="The Journal" title="Essays &" emphasis="dispatches." description="Long-form arguments, short-form rants, and footnotes for the politically curious." />
       <div className="border-b border-ink">
